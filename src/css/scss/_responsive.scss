@@ -1,25 +1,17 @@
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
-@media only screen and (max-width: $width+40) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-  // Type
-  h1,h2,h3,h4{
-    font-weight:600 !important;
-  }
-  h1{
-    font-size:22px !important;
-  }
-  h2{
-    font-size:18px !important;
-  }
-  h3{
-    font-size:16px !important;
-  }
+}
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
 
-  // Spacing
-  .content,.content-wrapper{
-    padding:10px !important;
-  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) { 
 
 }
