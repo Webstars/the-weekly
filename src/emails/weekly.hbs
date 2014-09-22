@@ -10,6 +10,16 @@ subject: The Weekly
 				<!-- CONTAINER TABLE -->
 				<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" id="containertable">
 					<tr>
+						<td>
+							<div mc:edit="std_preheader_content" class="preheader">
+								Use one or two sentences in this area to offer a teaser of your email's content. Text here will show in a preview area in some email clients.
+							</div>
+							<div mc:edit="std_preheader_links" class="preheader--link">
+								<!-- *|IFNOT:ARCHIVE_PAGE|* -->Is this email not displaying correctly? <a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.<!-- *|END:IF|* -->
+							</div>
+						</td>
+					</tr>
+					<tr>
 						<td align="left" valign="top" id="containercell">
 							<table width="100%" cellspacing="0" cellspacing="0" class="header">
 								<tr>
@@ -22,24 +32,38 @@ subject: The Weekly
 							<table cellspacing="0" cellspacing="0" class="articles">
 								<tr>
 									<td>
-									<div class="article">
-										<h3><a href="http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/" target="_blank">Poor UI Design Can Kill</a></h3>
-										<blockquote>&quot;On January 20, 1992, Air Inter Flight 148 crashed into the Vosges Mountains while approaching Strasbourg Airport in Strasbourg, France. 87 of the 96 crew and passengers on board were killed. So why am I writing about a horrible accident on my programming blog? Because of the cause of the crash.&quot;</blockquote>
-									</div>
-									<div class="article">
-										<h3><a href="http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/" target="_blank">Poor UI Design Can Kill</a></h3>
-										<p>&quot;On January 20, 1992, Air Inter Flight 148 crashed into the Vosges Mountains while approaching Strasbourg Airport in Strasbourg, France. 87 of the 96 crew and passengers on board were killed. So why am I writing about a horrible accident on my programming blog? Because of the cause of the crash.&quot;</p>
-										<blockquote>&quot;On January 20, 1992, Air Inter Flight 148 crashed into the Vosges Mountains while approaching Strasbourg Airport in Strasbourg, France. 87 of the 96 crew and passengers on board were killed. So why am I writing about a horrible accident on my programming blog? Because of the cause of the crash.&quot;</blockquote>
-									</div>
-									<div class="article">
-										<h3><a href="http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/" target="_blank">Poor UI Design Can Kill</a></h3>
-										<blockquote>&quot;On January 20, 1992, Air Inter Flight 148 crashed into the Vosges Mountains while approaching Strasbourg Airport in Strasbourg, France. 87 of the 96 crew and passengers on board were killed. So why am I writing about a horrible accident on my programming blog? Because of the cause of the crash.&quot;</blockquote>
+									<div class="article" mc:repeatable>
+										<h3 mc:edit="article_title"><a href="http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/" target="_blank">Poor UI Design Can Kill</a></h3>
+										<p mc:edit="article_content">
+											<blockquote>&quot;On January 20, 1992, Air Inter Flight 148 crashed into the Vosges Mountains while approaching Strasbourg Airport in Strasbourg, France. 87 of the 96 crew and passengers on board were killed. So why am I writing about a horrible accident on my programming blog? Because of the cause of the crash.&quot;</blockquote>
+										</p>
+										
 									</div>
 									</td>
 								</tr>
 							</table>
 						</td>
 					</tr>
+					<table width="100%" id="footer-table" border="0" cellpadding="10" cellspacing="20">
+						<tr>
+							<td>
+								<div mc:edit="std_footer" class="footer-content">
+									<em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+									<br>
+									*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+									<br>
+									<br>
+									<strong>Our mailing address is:</strong>
+									<br>
+									*|HTML:LIST_ADDRESS_HTML|**|END:IF|* 
+								</div>
+								<br>
+								<div mc:edit="monkeyrewards">
+									*|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+								</div>
+							</td>
+						</tr>
+					</table>
 				</table> <!-- END CONTAINER TABLE -->
 			</div>
 		</td>

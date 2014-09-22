@@ -150,6 +150,28 @@ img {
   max-width: 100%;
 }
 
+.footer-content em,
+.footer-content strong,
+.footer-content {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.preheader,
+.preheader--link,
+.preheader--link a {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.preheader {
+  display: none;
+}
+
+.preheader--link {
+  margin-bottom: 33px;
+}
+
 /* -------------------------------------
     OTHER STYLES THAT MIGHT BE USEFUL
 ------------------------------------- */
@@ -176,5 +198,3 @@ img {
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
-
-/*# sourceMappingURL=main.css.map */
